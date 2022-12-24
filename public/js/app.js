@@ -17425,6 +17425,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'ComponentsTest',
   data: function data() {
@@ -17435,6 +17437,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     plusNumber: function plusNumber() {
       this.number++;
+    },
+    axsiosMt: function axsiosMt() {
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/send/axios').then(function (res) {
+        alert(res.data);
+      });
     }
   }
 });
@@ -17460,12 +17467,19 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "border rounded-3 p-2 bg-secondary my-2"
 };
+var _hoisted_3 = {
+  "class": "border rounded-3 p-2 bg-secondary my-2"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.number), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.plusNumber && $options.plusNumber.apply($options, arguments);
     })
-  }, " plus Vue ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "test")])], 64 /* STABLE_FRAGMENT */);
+  }, " plus Vue ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "test")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[1] || (_cache[1] = function () {
+      return $options.axsiosMt && $options.axsiosMt.apply($options, arguments);
+    })
+  }, "Push Click")])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -17492,6 +17506,7 @@ var app = (0,vue_dist_vue_esm_bundler_js__WEBPACK_IMPORTED_MODULE_1__.createApp)
       version: '3-v'
     };
   },
+  mounted: function mounted() {},
   components: {
     ComponentsTest: _components_ComponentsTest__WEBPACK_IMPORTED_MODULE_2__["default"]
   },

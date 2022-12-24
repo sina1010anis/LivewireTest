@@ -21,6 +21,7 @@
                 $data = ['name' => 'sina' , 'family'=> 'nayebzade']
             @endphp
             <livewire:test-component :data="$data" />
+            <livewire:show-component>
 
             @livewireScripts
         </div>

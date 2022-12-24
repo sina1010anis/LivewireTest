@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
+Route::get('/bach' , [Controller::class , 'bach']);
 Route::get('/{name}', SlotTest::class);
 Route::get('/test/item' , [Controller::class , 'index']);
+Route::post('/send/axios' , [Controller::class , 'axios']);
