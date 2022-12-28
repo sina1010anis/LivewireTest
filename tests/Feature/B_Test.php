@@ -15,10 +15,16 @@ class B_Test extends TestCase
      *
      * @return void
      */
+    public $count;
     public function test_example()
     {
 
         for($i = 1 ; $i < 200 ; $i++)
             User::find($i)->update(['name' => fake()->name()]);
+
+            $this->count++;
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
     }
 }
