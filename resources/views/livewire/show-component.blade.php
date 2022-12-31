@@ -46,4 +46,14 @@
         @endforeach
         {{ $users->links() }}
     </div>
+
+    <div class="border rounded-3 p-2 bg-secondary my-2 ">
+        <div wire:loading wire:target="testComponent(20)">
+            <div class="text-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

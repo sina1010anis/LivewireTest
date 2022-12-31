@@ -15,7 +15,8 @@ class Controller extends BaseController
     public User $user;
     public $status = false;
     public function index(){
-        return view('welcome');
+
+        //return view('welcome');
 
     }
     public function axios()
